@@ -16,7 +16,7 @@ import static org.junit.Assert.assertThat;
 
 public class FileAccessorTest {
 
-    private static final String EXAMPLE_FILE = "us/counties.csv";
+    private static final String EXAMPLE_FILE = "us/input/counties.csv";
     private static final Charset CHARSET = Charsets.UTF_8;
 
     @Test
