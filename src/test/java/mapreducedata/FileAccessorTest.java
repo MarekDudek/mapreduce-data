@@ -59,7 +59,7 @@ public class FileAccessorTest {
     public void lines_should_be_accessible_via_even_simpler_API() {
 
         // when
-        final List<String> lines =  FileAccessor.readLinesFromResources(EXAMPLE_FILE);
+        final List<String> lines = FileAccessor.readLinesFromResources(EXAMPLE_FILE);
 
         // then
         assertThat(lines, notNullValue());
