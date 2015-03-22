@@ -1,5 +1,7 @@
 package mapreducedata.maxtemperature;
 
+import com.google.common.base.MoreObjects;
+
 import static com.google.common.base.Preconditions.checkNotNull;
 
 public class WeatherDataRecord {
@@ -12,5 +14,26 @@ public class WeatherDataRecord {
         this.year = checkNotNull(year);
         this.airTemperature = airTemperature;
         this.quality = checkNotNull(quality);
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("year", year)
+                .add("air temperature", airTemperature)
+                .add("quality", quality)
+                .toString();
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public int getAirTemperature() {
+        return airTemperature;
+    }
+
+    public String getQuality() {
+        return quality;
     }
 }
