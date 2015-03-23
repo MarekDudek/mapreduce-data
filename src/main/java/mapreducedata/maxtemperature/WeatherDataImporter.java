@@ -7,14 +7,14 @@ import java.util.List;
 
 public class WeatherDataImporter {
 
-    public List<WeatherDataRecord> importData(final String file) {
+    public List<WeatherData> importData(final String file) {
 
         final List<String> lines = FileAccessor.readLinesFromResources(file);
         final WeatherDataParser parser = new WeatherDataParser();
 
-        final List<WeatherDataRecord> records = Lists.newArrayList();
+        final List<WeatherData> records = Lists.newArrayList();
         for (final String line : lines) {
-            final WeatherDataRecord record = parser.parse(line);
+            final WeatherData record = parser.parse(line);
             records.add(record);
         }
 

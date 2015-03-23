@@ -13,7 +13,7 @@ public class WeatherDataImporterTest {
     public void importing_data() {
 
         // when
-        final List<WeatherDataRecord> records = new WeatherDataImporter().importData("max-temperature/input/1901");
+        final List<WeatherData> records = new WeatherDataImporter().importData("max-temperature/input/1901");
 
         // then
         assertThat(records, hasSize(6565));

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.regex.Pattern;
 
 @Data
-public class WeatherDataRecord {
+public class WeatherData {
 
     private final String year;
     private final int airTemperature;

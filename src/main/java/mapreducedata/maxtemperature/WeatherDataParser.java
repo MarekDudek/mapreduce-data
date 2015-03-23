@@ -2,13 +2,13 @@ package mapreducedata.maxtemperature;
 
 public class WeatherDataParser {
 
-    public WeatherDataRecord parse(final String line) {
+    public WeatherData parse(final String line) {
 
         final String year = year(line);
         final int airTemperature = airTemperature(line);
         final String quality = quality(line);
 
-        return new WeatherDataRecord(year, airTemperature, quality);
+        return new WeatherData(year, airTemperature, quality);
     }
 
     private static final int YEAR_START = 15;
