@@ -4,7 +4,7 @@ public class WeatherDataParser {
 
     public WeatherData parse(final String line) {
 
-        final String year = year(line);
+        final int year = year(line);
         final int airTemperature = airTemperature(line);
         final String quality = quality(line);
 
@@ -14,8 +14,9 @@ public class WeatherDataParser {
     private static final int YEAR_START = 15;
     private static final int YEAR_LENGTH = 4;
 
-    private String year(final String line) {
-        return line.substring(YEAR_START, YEAR_START + YEAR_LENGTH);
+    private int year(final String line) {
+        final String string = line.substring(YEAR_START, YEAR_START + YEAR_LENGTH);
+        return Integer.parseInt(string);
     }
 
     private static final int AIR_TEMPERATURE_START = 87;

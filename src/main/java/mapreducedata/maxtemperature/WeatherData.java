@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 @Data
 public class WeatherData {
 
-    private final String year;
+    private final int year;
     private final int airTemperature;
     private final String quality;
 
